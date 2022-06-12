@@ -1,0 +1,21 @@
+{
+  "name": "@todo/root",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "server",
+      "front"
+    ]
+  },
+  "scripts": {
+    "server": "yarn workspace @todo/server",
+    "front": "yarn workspace @todo/front",
+    "start:dev": "concurrently \"yarn server start:dev\" \"yarn front start\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1"
+  }
+}
