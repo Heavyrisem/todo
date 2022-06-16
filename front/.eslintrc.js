@@ -23,6 +23,9 @@ module.exports = {
     ignorePatterns: ['.eslintrc.js', 'craco.config.js', 'tailwind.config.js', 'postcss.config.js'],
     plugins: ['react', '@typescript-eslint'],
     rules: {
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'off',
         '@typescript-eslint/no-unused-vars': 'warn',
         'prettier/prettier': 'error',
@@ -49,15 +52,21 @@ module.exports = {
                 groups: ['builtin', 'external', ['parent', 'sibling'], 'index'],
                 pathGroups: [
                     {
-                        pattern: 'angular',
-                        group: 'external',
+                        pattern: '@**',
+                        group: 'builtin',
                         position: 'before'
-                    }
+                    },
+                    {
+                        pattern: 'react',
+                        group: 'builtin',
+                        position: 'before'
+                    },
                 ],
                 alphabetize: {
                     order: 'asc',
                     caseInsensitive: true,
                 },
+                "pathGroupsExcludedImportTypes": ["react"],
                 'newlines-between': 'always',
             },
         ],

@@ -11,6 +11,9 @@
             "@src/*": [
                 "src/*"
             ],
+            "@icons/*": [
+                "src/icons/*"
+            ],
             "@shared/*": [
                 "../shared/*"
             ]

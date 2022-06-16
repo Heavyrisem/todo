@@ -26,7 +26,7 @@ module.exports = {
         groups: ['builtin', 'external', ['parent', 'sibling'], 'index'],
         pathGroups: [
           {
-            pattern: '@/**',
+            pattern: '~/**',
             group: 'external',
           },
         ],
@@ -40,8 +40,12 @@ module.exports = {
         map: [
           ["@shared", path.resolve(__dirname, "../shared")]
         ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
       },
-      "typescript": {}  // this loads <rootdir>/tsconfig.json to eslint
+      // "node": {
+      //   "moduleDirectory": ["node_modules", "@shared", "@types", "../shared"]
+      // },
+      // "typescript": {}  // this loads <rootdir>/tsconfig.json to eslint
     }
   },
 }
