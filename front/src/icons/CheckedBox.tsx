@@ -2,14 +2,7 @@ import React from 'react';
 
 const CheckedBox = React.forwardRef<SVGSVGElement>((props, ref) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      {...props}
-      ref={ref}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props} ref={ref}>
       <g id="그룹_3386" data-name="그룹 3386" transform="translate(-65 -39)">
         <rect
           id="사각형_489"

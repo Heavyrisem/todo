@@ -8,11 +8,11 @@
             "@hooks/*": [
                 "src/hooks/*"
             ],
-            "@src/*": [
-                "src/*"
-            ],
             "@icons/*": [
                 "src/icons/*"
+            ],
+            "@src/*": [
+                "src/*"
             ],
             "@shared/*": [
                 "../shared/*"

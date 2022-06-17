@@ -21,7 +21,7 @@ module.exports = {
         tsconfigRootDir: __dirname,
     },
     ignorePatterns: ['.eslintrc.js', 'craco.config.js', 'tailwind.config.js', 'postcss.config.js'],
-    plugins: ['react', '@typescript-eslint'],
+    plugins: ['react', '@typescript-eslint', 'eslint-plugin-import-helpers'],
     rules: {
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
@@ -46,31 +46,19 @@ module.exports = {
                 tsx: 'never',
             },
         ],
-        'import/order': [
+        'import-helpers/order-imports': [
             'error',
             {
-                groups: ['builtin', 'external', ['parent', 'sibling'], 'index'],
-                pathGroups: [
-                    {
-                        pattern: '@**',
-                        group: 'builtin',
-                        position: 'before'
-                    },
-                    {
-                        pattern: 'react',
-                        group: 'builtin',
-                        position: 'before'
-                    },
-                ],
+                groups: ['/react/', 'module', '/^@/', ['parent', 'sibling', 'index']],
                 alphabetize: {
                     order: 'asc',
                     caseInsensitive: true,
                 },
-                "pathGroupsExcludedImportTypes": ["react"],
-                'newlines-between': 'always',
+                newlinesBetween: 'always',
             },
         ],
         'jsx-a11y/media-has-caption': 'off',
-        'jsx-a11y/control-has-associated-label': 'off'
+        'jsx-a11y/control-has-associated-label': 'off',
+        "react/prop-types": "off"
     },
 };
