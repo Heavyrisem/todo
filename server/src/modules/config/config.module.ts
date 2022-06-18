@@ -11,7 +11,7 @@ import * as Joi from 'joi';
         NODE_ENV: Joi.string().valid('development', 'production', 'test').required(),
         PORT: Joi.number(),
         REACT_URL: Joi.string().default('http://localhost:3000'),
-        REACT_DIR: Joi.string().default('../../build_react'),
+        REACT_DIR: Joi.string().default('./build_react'),
       }),
     }),
   ],

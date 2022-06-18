@@ -13,7 +13,9 @@
   "scripts": {
     "server": "yarn workspace @todo/server",
     "front": "yarn workspace @todo/front",
-    "start:dev": "concurrently \"yarn server start:dev\" \"yarn front start\""
+    "start:dev": "concurrently \"yarn server start:dev\" \"yarn front start\"",
+    "start:prod": "yarn server start:prod",
+    "build": "yarn server build && yarn front build"
   },
   "devDependencies": {
     "concurrently": "^7.2.1"
